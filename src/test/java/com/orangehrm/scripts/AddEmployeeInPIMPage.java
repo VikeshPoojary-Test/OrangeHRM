@@ -1,20 +1,14 @@
-package com.OrangeHRM.scripts;
+package com.orangehrm.scripts;
 
-import com.orangehrm.BaseTest;
 import com.orangehrm.common.constant.LeftNavBar;
-import com.orangehrm.common.constant.PIMPageConstant;
 import com.orangehrm.dataprovider.PIMPageData;
 import com.orangehrm.pages.HRMLoginPage;
 import com.orangehrm.pages.LeftNavigationBarPage;
 import com.orangehrm.pages.PIMPage;
 import com.orangehrm.utility.TestDataUtils;
-import lombok.SneakyThrows;
 import org.testng.annotations.Test;
 
-import java.text.ParseException;
-
 public class AddEmployeeInPIMPage extends BaseTest {
-
 
     @Test
     public void method(){

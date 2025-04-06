@@ -28,11 +28,23 @@ public class BasePage extends ExtentReportManager {
         webDriverWait = new WebDriverWait(WebdriverManager.getDriver(), Duration.ofSeconds(20));
     }
 
+
+    /**
+     * Clicks on the web element located by the specified locator.
+     *
+     * @param locator the By locator to find the web element to be clicked
+     */
     public void click(By locator) {
         waitAndGetElement(locator).click();
     }
 
+    /**
+     * Clicks on the provided web element.
+     *
+     * @param webElement the web element to be clicked
+     */
     public void click(WebElement webElement) {
+        // Click on the provided web element
         webElement.click();
     }
 

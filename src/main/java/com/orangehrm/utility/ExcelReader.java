@@ -36,7 +36,7 @@ public class ExcelReader {
         for (int readRow = 0; readRow < numberOfRow; readRow++) {
             for (int readCol = 0; readCol < numberOfCol; readCol++) {
                 XSSFRow rowNum = workSheet.getRow(readRow);
-                XSSFCell currCell = rowNum.getCell((short) readCol);
+                XSSFCell currCell = rowNum.getCell(readCol);
 
                 switch (formulaEvaluator.evaluate(currCell).getCellType()) {
                     case NUMERIC:
@@ -50,7 +50,9 @@ public class ExcelReader {
         }
 
         List<String[]> l = new ArrayList<String[]>(Arrays.asList(sheetData));
-        l.remove(0);
+        if (!l.isEmpty()) {
+            l.removeFirst();
+        }
 
         array2 = l.toArray(new String[][]{});
         int countFilter = 0;

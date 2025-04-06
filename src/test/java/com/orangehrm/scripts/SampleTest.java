@@ -1,9 +1,8 @@
-package com.OrangeHRM.scripts;
+package com.orangehrm.scripts;
 
-import com.aventstack.extentreports.Status;
-import com.orangehrm.BaseTest;
 import com.orangehrm.common.constant.AdminPageConstants;
 import com.orangehrm.common.constant.LeftNavBar;
+import com.orangehrm.dataprovider.AdminDataProvider;
 import com.orangehrm.dataprovider.AdminPageData;
 import com.orangehrm.pages.AdminPage;
 import com.orangehrm.pages.HRMLoginPage;
@@ -12,13 +11,13 @@ import org.testng.annotations.Test;
 
 public class SampleTest extends BaseTest {
 
-    @Test
-    public void sample() throws InterruptedException {
+    @Test(dataProviderClass = AdminDataProvider.class,dataProvider = "adminData")
+    public void sample(AdminPageData adminPageData) throws InterruptedException {
 
         HRMLoginPage hrmLoginPage = new HRMLoginPage();
         hrmLoginPage.loginToHRM();
 
-        AdminPageData adminPageData = TestDataUtils.getAdminPageData();
+//        AdminPageData adminPageData = TestDataUtils.getAdminPageData();
 
         AdminPage adminPage = new AdminPage();
         adminPage.navigateTo(LeftNavBar.ADMIN);

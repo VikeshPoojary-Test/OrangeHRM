@@ -26,6 +26,7 @@ public class WebdriverManager {
        } else {
            driver = new ChromeDriver();
        }
+       threadLocal.set(driver);
        return driver;
     }
 

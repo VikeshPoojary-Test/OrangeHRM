@@ -6,11 +6,10 @@
         <listener class-name="com.orangehrm.utility.Listener"></listener>
     </listeners>
     
-    <test verbose="2" preserve-order="true" name="C:/Users/vikes/IdeaProjects/OrangeHRM">
+    <test verbose="2" preserve-order="true" name="C:/Users/vikes/IdeaProjects/OrangeHRM" thread-count="2" parallel="methods">
         <classes>
-            <class name="com.OrangeHRM.scripts.SampleTest">
-                <methods><include name="sample"/></methods>
-            </class>
+            <class name="com.orangehrm.scripts.SampleTest"/>
+            <class name="com.orangehrm.scripts.AddEmployeeInPIMPage"/>
         </classes>
     </test>
 </suite>

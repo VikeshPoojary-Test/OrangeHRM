@@ -146,7 +146,7 @@ public class AdminPage extends BasePage {
 
         // Pass the Username
         passValue(addUserName_Field, adminPageData.getUserName());
-        logReport(Status.PASS, "Username is : " + adminPageData.getUserName(), true);
+        //logReport(Status.PASS, "Username is : " + adminPageData.getUserName(), true);
 
         // Choose user status from the dropdown
         click(addUserStatus_Button);
@@ -190,7 +190,7 @@ public class AdminPage extends BasePage {
         for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i).findElement(tableHeader).getText());
             if (list.get(i).findElement(tableHeader).getText().equalsIgnoreCase(pageData)) {
-                logReport(Status.PASS, "Data Verified", false);
+                //logReport(Status.PASS, "Data Verified", false);
             }
         }
     }
