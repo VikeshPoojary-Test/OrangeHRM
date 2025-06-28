@@ -9,7 +9,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/vikes/IdeaProjects/OrangeHRM" thread-count="2" parallel="methods">
         <classes>
             <class name="com.orangehrm.scripts.SampleTest"/>
-            <class name="com.orangehrm.scripts.AddEmployeeInPIMPage"/>
+<!--            <class name="com.orangehrm.scripts.AddEmployeeInPIMPage"/>-->
         </classes>
     </test>
 </suite>

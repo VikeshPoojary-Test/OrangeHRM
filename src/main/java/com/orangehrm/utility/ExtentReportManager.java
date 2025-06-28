@@ -6,7 +6,11 @@ import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -25,8 +29,10 @@ public class ExtentReportManager {
     }
 
     public static ExtentReports setupExtentReport(String testCaseName) {
+        String reportPath = System.getProperty("user.dir") + "/target/results";
 
-        String filePath = System.getProperty("user.dir") + "/src/test/results/" +setExtentReportName()+ ".html";
+        String filePath =reportPath+File.separator + setExtentReportName() + ".html";
+
         ExtentSparkReporter reporter = new ExtentSparkReporter(filePath);
 
         extentReports.attachReporter(reporter);
@@ -55,7 +61,7 @@ public class ExtentReportManager {
     }
 
 
-    public synchronized static void logReport(Status status, String message, boolean takeScreenshot){
+    public synchronized static void logReport(Status status, String message, boolean takeScreenshot) {
         if (takeScreenshot) {
             ScreenshotManager screenshotManager = new ScreenshotManager();
             getTest().log(status, message, MediaEntityBuilder.createScreenCaptureFromPath(screenshotManager.getScreenShotWithBase64()).build());
