@@ -30,9 +30,9 @@ public class WebdriverManager {
        return driver;
     }
 
-    public static void getURL(){
-        String url = PropertyReader.getConfigProperty("url");
-        getDriver().get(url);
+    public static String getURL(){
+        return PropertyReader.getConfigProperty("url");
+
     }
 
 //    public static String reportPath = null;

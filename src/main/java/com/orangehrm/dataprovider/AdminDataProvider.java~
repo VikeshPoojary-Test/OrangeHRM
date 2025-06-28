@@ -1,0 +1,4 @@
+package com.orangehrm.dataprovider;
+
+public class AdminDataProvider {
+}

@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <listeners>
         <listener class-name="com.orangehrm.utility.RetryAnnotation"/>
-        <listener class-name="com.orangehrm.utility.Listener"></listener>
+        <listener class-name="com.orangehrm.utility.Listener"/>
     </listeners>
     
     <test verbose="2" preserve-order="true" name="C:/Users/vikes/IdeaProjects/OrangeHRM" thread-count="2" parallel="methods">

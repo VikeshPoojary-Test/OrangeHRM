@@ -1,6 +1,7 @@
 package com.orangehrm.scripts;
 
 import com.orangehrm.common.WebdriverManager;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -13,8 +14,9 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethod() {
         // Navigate to the specified URL
-        WebdriverManager.createWebdriver();
-        WebdriverManager.getURL();
+        WebDriver driver = WebdriverManager.createWebdriver();
+        String url = WebdriverManager.getURL();
+        driver.get(url);
 
         // Maximize the browser window
         WebdriverManager.getDriver().manage().window().maximize();

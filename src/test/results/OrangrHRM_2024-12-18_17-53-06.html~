@@ -150,7 +150,7 @@ Session ID: acf840c618845f38a176f8c8954f42cb
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
 	at com.orangehrm.BasePage.click(BasePage.java:28)
 	at com.orangehrm.pages.AdminPage.verifyUserDataChanges(AdminPage.java:174)
-	at com.orangehrm.scripts.SampleTest.sample(SampleTest.java:29)
+	at com.OrangeHRM.scripts.SampleTest.sample(SampleTest.java:29)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
